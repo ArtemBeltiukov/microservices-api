@@ -1,5 +1,4 @@
 server.port: 8282
-name: tst
 eureka:
   client:
     registerWithEureka: false
