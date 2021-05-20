@@ -7,10 +7,12 @@ endpoints:
     sensitive: true
 
 zuul:
+  ignoredServices: '*'
   routes:
     workspaces-api: 
-      path: /workspaces1/**
+      path: /workspaces/**
       serviceId: workspaces-service
+      stripPrefix: true
     employees-api: 
-      path: /employees1/**
+      path: /employees/**
       serviceId: employees-service
