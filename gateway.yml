@@ -1,0 +1,17 @@
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: true
+
+zuul:
+  routes:
+    workspaces-api:
+      serviceId: workspaces-service
+      path: /workspaces/**
+    employees-api:
+      serviceId: employees-service
+      path: /employees/**
+
