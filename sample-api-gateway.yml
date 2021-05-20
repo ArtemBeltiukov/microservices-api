@@ -11,4 +11,6 @@ zuul:
     workspaces-api: 
       path: /workspaces/**
       serviceId: workspaces-service
-    employees-api: /employees/**
+    employees-api: 
+      path: /employees/**
+      serviceId: employees-service
