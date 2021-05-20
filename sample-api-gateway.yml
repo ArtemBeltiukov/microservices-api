@@ -7,7 +7,6 @@ endpoints:
     sensitive: true
 
 zuul:
-  ignoredServices: '*'
   routes:
     workspaces-api: 
       path: /workspaces/**
