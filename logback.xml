@@ -3,13 +3,6 @@
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />
     <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
     <springProperty name="appName" source="spring.application.name"  />
-    <property name="logstash_host" value="localhost"  />
-    <appender name="stash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>${logstash_host}:5000</destination>
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-            <customFields>{"appname":"${appName}"}</customFields>
-        </encoder>
-    </appender>
     <appender name="filebeatAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>./log/application.log</file>
         <append>true</append>
@@ -21,7 +14,6 @@
     </appender>
     <root level="info">
         <appender-ref ref="CONSOLE" />
-        #<appender-ref ref="stash" />
         <appender-ref ref="filebeatAppender" />
     </root>
 </configuration>
