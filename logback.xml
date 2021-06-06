@@ -10,8 +10,18 @@
             <customFields>{"appname":"${appName}"}</customFields>
         </encoder>
     </appender>
+    <appender name="filebeatAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./log/application.log</file>
+        <append>true</append>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>./log/application.%d.%i.log.gz</fileNamePattern>
+            <maxFileSize>1000MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
     <root level="info">
         <appender-ref ref="CONSOLE" />
-        <appender-ref ref="stash" />
+        #<appender-ref ref="stash" />
+        <appender-ref ref="filebeatAppender" />
     </root>
 </configuration>
