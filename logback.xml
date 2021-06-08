@@ -8,7 +8,7 @@
         <append>true</append>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>./log/application.%d.%i.log.gz</fileNamePattern>
+            <fileNamePattern>/log123/application.%d.%i.log.gz</fileNamePattern>
             <maxFileSize>1000MB</maxFileSize>
         </rollingPolicy>
     </appender>
