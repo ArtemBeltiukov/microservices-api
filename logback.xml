@@ -4,7 +4,7 @@
     <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
     <springProperty name="appName" source="spring.application.name"  />
     <appender name="filebeatAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>.\log\application.log</file>
+        <file>\log\application.log</file>
         <append>true</append>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
