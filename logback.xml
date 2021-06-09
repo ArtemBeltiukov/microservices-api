@@ -3,11 +3,11 @@
     <include resource="org/springframework/boot/logging/logback/defaults.xml" />
     <springProperty name="appName" source="spring.application.name"  />
     <appender name="filebeatAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/var/log/application.log</file>
+        <file>./var/log/application.log</file>
         <append>true</append>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>/var/log/application.%d.%i.log.gz</fileNamePattern>
+            <fileNamePattern>./var/log/application.%d.%i.log.gz</fileNamePattern>
             <maxFileSize>1000MB</maxFileSize>
         </rollingPolicy>
     </appender>
