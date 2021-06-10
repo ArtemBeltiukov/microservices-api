@@ -13,5 +13,6 @@
     </appender>
     <root level="info">
         <appender-ref ref="filebeatAppender" />
+        <appender-ref ref="CONSOLE" />
     </root>
 </configuration>
